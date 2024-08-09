@@ -3,24 +3,24 @@ import Combine
 
 class BalanceViewModel: ObservableObject {
     @Published var balances: [Balance] = []
-
-    // Initialize the balance with a specific currency
-    func initializeBalance(currency: Currency, amount: Double) {
-        let newBalance = Balance(id: UUID(), amount: amount, currency: currency)
+    private var cancellables = Set<AnyCancellable>()
+    
+    func addBalance(amount: Double, currency: String) {
+        let newBalance = Balance(currency: currency, amount: amount)
         balances.append(newBalance)
+        
+        // Here you would typically save the balance to your backend
+        // For example:
+        // databaseManager.saveBalances(balances: balances)
     }
     
-    // Update balance by adding an amount
-    func addToBalance(amount: Double, currency: Currency) {
-        if let index = balances.firstIndex(where: { $0.currency == currency }) {
-            balances[index].amount += amount
+    func updateBalance(id: UUID, amount: Double, currency: String) {
+        if let index = balances.firstIndex(where: { $0.id == id }) {
+            balances[index].amount = amount
+            balances[index].currency = currency // Ensure currency is updated
         }
-    }
-    
-    // Update balance by subtracting an amount
-    func subtractFromBalance(amount: Double, currency: Currency) {
-        if let index = balances.firstIndex(where: { $0.currency == currency }) {
-            balances[index].amount -= amount
-        }
+        
+        // Save updated balances to backend
+        // databaseManager.saveBalances(balances: balances)
     }
 }

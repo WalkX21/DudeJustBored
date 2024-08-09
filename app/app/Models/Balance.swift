@@ -1,9 +1,14 @@
 import Foundation
+import CoreData
 
-struct Balance: Identifiable, Codable {
-    let id: UUID
-    var amount: Double
-    let currency: Currency
-    //var cash: Double? // Optional for MAD
-    //var card: Double? // Optional for MAD
+@objc(Balance)
+public class Balance: NSManagedObject {
+    @NSManaged public var totalBalance: Double
+    @NSManaged public var user: User?
+}
+
+extension Balance {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Balance> {
+        return NSFetchRequest<Balance>(entityName: "Balance")
+    }
 }

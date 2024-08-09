@@ -33,6 +33,12 @@
 		1CE1BB8B2C594C41007E8CEE /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB8A2C594C41007E8CEE /* AppViewModel.swift */; };
 		1CE1BB8D2C599EA4007E8CEE /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB8C2C599EA3007E8CEE /* DatabaseManager.swift */; };
 		1CE1BB8F2C599F76007E8CEE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB8E2C599F76007E8CEE /* ContentView.swift */; };
+		1CE1BB932C5A696F007E8CEE /* AuthentificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB922C5A696F007E8CEE /* AuthentificationView.swift */; };
+		1CE1BB962C5A8758007E8CEE /* data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB942C5A8758007E8CEE /* data.xcdatamodeld */; };
+		1CE1BB982C5A8E68007E8CEE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB972C5A8E68007E8CEE /* Persistence.swift */; };
+		1CE1BB9A2C5A8E8F007E8CEE /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB992C5A8E8F007E8CEE /* app.swift */; };
+		1CE1BB9C2C5A8EB0007E8CEE /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB9B2C5A8EB0007E8CEE /* UserViewModel.swift */; };
+		1CE1BB9E2C5A8ED4007E8CEE /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE1BB9D2C5A8ED4007E8CEE /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,12 @@
 		1CE1BB8A2C594C41007E8CEE /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		1CE1BB8C2C599EA3007E8CEE /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		1CE1BB8E2C599F76007E8CEE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1CE1BB922C5A696F007E8CEE /* AuthentificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationView.swift; sourceTree = "<group>"; };
+		1CE1BB952C5A8758007E8CEE /* data.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = data.xcdatamodel; sourceTree = "<group>"; };
+		1CE1BB972C5A8E68007E8CEE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		1CE1BB992C5A8E8F007E8CEE /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
+		1CE1BB9B2C5A8EB0007E8CEE /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		1CE1BB9D2C5A8ED4007E8CEE /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,9 @@
 				1CE1BB592C591985007E8CEE /* Views */,
 				1C1C3A0B2C46F0E100C571F8 /* Assets.xcassets */,
 				1CE1BB8E2C599F76007E8CEE /* ContentView.swift */,
+				1CE1BB942C5A8758007E8CEE /* data.xcdatamodeld */,
+				1CE1BB972C5A8E68007E8CEE /* Persistence.swift */,
+				1CE1BB992C5A8E8F007E8CEE /* app.swift */,
 			);
 			path = app;
 			sourceTree = "<group>";
@@ -170,6 +185,8 @@
 				1CE1BB602C591A4A007E8CEE /* TransactionView.swift */,
 				1CE1BB842C593721007E8CEE /* RegisterTransactionView.swift */,
 				1CE1BB862C593CA0007E8CEE /* RegisterBalanceView.swift */,
+				1CE1BB922C5A696F007E8CEE /* AuthentificationView.swift */,
+				1CE1BB9D2C5A8ED4007E8CEE /* RegisterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,6 +212,7 @@
 				1CE1BB6C2C591B2E007E8CEE /* BalanceViewModel.swift */,
 				1CE1BB702C591B6B007E8CEE /* TransactionViewModel.swift */,
 				1CE1BB8A2C594C41007E8CEE /* AppViewModel.swift */,
+				1CE1BB9B2C5A8EB0007E8CEE /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -353,19 +371,25 @@
 				1CE1BB6D2C591B2E007E8CEE /* BalanceViewModel.swift in Sources */,
 				1CE1BB712C591B6B007E8CEE /* TransactionViewModel.swift in Sources */,
 				1CE1BB7A2C591D1D007E8CEE /* Currency.swift in Sources */,
+				1CE1BB932C5A696F007E8CEE /* AuthentificationView.swift in Sources */,
 				1CE1BB642C591A74007E8CEE /* User.swift in Sources */,
 				1CE1BB762C591CDA007E8CEE /* TransactionType.swift in Sources */,
+				1CE1BB962C5A8758007E8CEE /* data.xcdatamodeld in Sources */,
 				1CE1BB8B2C594C41007E8CEE /* AppViewModel.swift in Sources */,
 				1CE1BB782C591CFC007E8CEE /* TransactionCategory.swift in Sources */,
 				1CE1BB8F2C599F76007E8CEE /* ContentView.swift in Sources */,
 				1CE1BB612C591A4A007E8CEE /* TransactionView.swift in Sources */,
 				1CE1BB5D2C5919FA007E8CEE /* SignUpView.swift in Sources */,
+				1CE1BB9E2C5A8ED4007E8CEE /* RegisterView.swift in Sources */,
 				1CE1BB892C593D95007E8CEE /* BalanceType.swift in Sources */,
 				1CE1BB6B2C591AFE007E8CEE /* AuthenticationViewModel.swift in Sources */,
+				1CE1BB9A2C5A8E8F007E8CEE /* app.swift in Sources */,
+				1CE1BB982C5A8E68007E8CEE /* Persistence.swift in Sources */,
 				1CE1BB7D2C591E5F007E8CEE /* TransactionRow.swift in Sources */,
 				1CE1BB662C591AA2007E8CEE /* Balance.swift in Sources */,
 				1CE1BB852C593721007E8CEE /* RegisterTransactionView.swift in Sources */,
 				1CE1BB5B2C5919A1007E8CEE /* LoginView.swift in Sources */,
+				1CE1BB9C2C5A8EB0007E8CEE /* UserViewModel.swift in Sources */,
 				1CE1BB8D2C599EA4007E8CEE /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -690,6 +714,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1CE1BB942C5A8758007E8CEE /* data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1CE1BB952C5A8758007E8CEE /* data.xcdatamodel */,
+			);
+			currentVersion = 1CE1BB952C5A8758007E8CEE /* data.xcdatamodel */;
+			path = data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1C1C39FC2C46F0DF00C571F8 /* Project object */;
 }

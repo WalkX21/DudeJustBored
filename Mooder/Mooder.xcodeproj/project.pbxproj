@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1CBC21D72C6152160076F431 /* MooderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBC21D62C6152160076F431 /* MooderApp.swift */; };
+		1CBC21D92C6152160076F431 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBC21D82C6152160076F431 /* ContentView.swift */; };
+		1CBC21DB2C6152170076F431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBC21DA2C6152170076F431 /* Assets.xcassets */; };
+		1CBC21DE2C6152170076F431 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CBC21DD2C6152170076F431 /* Preview Assets.xcassets */; };
+		1CBC21E82C6152170076F431 /* MooderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBC21E72C6152170076F431 /* MooderTests.swift */; };
+		1CBC21F22C6152180076F431 /* MooderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBC21F12C6152180076F431 /* MooderUITests.swift */; };
+		1CBC21F42C6152180076F431 /* MooderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBC21F32C6152180076F431 /* MooderUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CBC21E42C6152170076F431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CBC21CB2C6152160076F431 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CBC21D22C6152160076F431;
+			remoteInfo = Mooder;
+		};
+		1CBC21EE2C6152180076F431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1CBC21CB2C6152160076F431 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CBC21D22C6152160076F431;
+			remoteInfo = Mooder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CBC21D32C6152160076F431 /* Mooder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBC21D62C6152160076F431 /* MooderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooderApp.swift; sourceTree = "<group>"; };
+		1CBC21D82C6152160076F431 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1CBC21DA2C6152170076F431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CBC21DD2C6152170076F431 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1CBC21E32C6152170076F431 /* MooderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBC21E72C6152170076F431 /* MooderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooderTests.swift; sourceTree = "<group>"; };
+		1CBC21ED2C6152180076F431 /* MooderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MooderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBC21F12C6152180076F431 /* MooderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooderUITests.swift; sourceTree = "<group>"; };
+		1CBC21F32C6152180076F431 /* MooderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MooderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1CBC22002C6152880076F431 /* Mooder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Mooder.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CBC21D02C6152160076F431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBC21E02C6152170076F431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBC21EA2C6152180076F431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CBC21CA2C6152160076F431 = {
+			isa = PBXGroup;
+			children = (
+				1CBC21D52C6152160076F431 /* Mooder */,
+				1CBC21E62C6152170076F431 /* MooderTests */,
+				1CBC21F02C6152180076F431 /* MooderUITests */,
+				1CBC21D42C6152160076F431 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CBC21D42C6152160076F431 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CBC21D32C6152160076F431 /* Mooder.app */,
+				1CBC21E32C6152170076F431 /* MooderTests.xctest */,
+				1CBC21ED2C6152180076F431 /* MooderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CBC21D52C6152160076F431 /* Mooder */ = {
+			isa = PBXGroup;
+			children = (
+				1CBC22002C6152880076F431 /* Mooder.entitlements */,
+				1CBC21D62C6152160076F431 /* MooderApp.swift */,
+				1CBC21D82C6152160076F431 /* ContentView.swift */,
+				1CBC21DA2C6152170076F431 /* Assets.xcassets */,
+				1CBC21DC2C6152170076F431 /* Preview Content */,
+			);
+			path = Mooder;
+			sourceTree = "<group>";
+		};
+		1CBC21DC2C6152170076F431 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1CBC21DD2C6152170076F431 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1CBC21E62C6152170076F431 /* MooderTests */ = {
+			isa = PBXGroup;
+			children = (
+				1CBC21E72C6152170076F431 /* MooderTests.swift */,
+			);
+			path = MooderTests;
+			sourceTree = "<group>";
+		};
+		1CBC21F02C6152180076F431 /* MooderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1CBC21F12C6152180076F431 /* MooderUITests.swift */,
+				1CBC21F32C6152180076F431 /* MooderUITestsLaunchTests.swift */,
+			);
+			path = MooderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CBC21D22C6152160076F431 /* Mooder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBC21F72C6152180076F431 /* Build configuration list for PBXNativeTarget "Mooder" */;
+			buildPhases = (
+				1CBC21CF2C6152160076F431 /* Sources */,
+				1CBC21D02C6152160076F431 /* Frameworks */,
+				1CBC21D12C6152160076F431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mooder;
+			productName = Mooder;
+			productReference = 1CBC21D32C6152160076F431 /* Mooder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CBC21E22C6152170076F431 /* MooderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBC21FA2C6152180076F431 /* Build configuration list for PBXNativeTarget "MooderTests" */;
+			buildPhases = (
+				1CBC21DF2C6152170076F431 /* Sources */,
+				1CBC21E02C6152170076F431 /* Frameworks */,
+				1CBC21E12C6152170076F431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBC21E52C6152170076F431 /* PBXTargetDependency */,
+			);
+			name = MooderTests;
+			productName = MooderTests;
+			productReference = 1CBC21E32C6152170076F431 /* MooderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1CBC21EC2C6152180076F431 /* MooderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBC21FD2C6152180076F431 /* Build configuration list for PBXNativeTarget "MooderUITests" */;
+			buildPhases = (
+				1CBC21E92C6152180076F431 /* Sources */,
+				1CBC21EA2C6152180076F431 /* Frameworks */,
+				1CBC21EB2C6152180076F431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1CBC21EF2C6152180076F431 /* PBXTargetDependency */,
+			);
+			name = MooderUITests;
+			productName = MooderUITests;
+			productReference = 1CBC21ED2C6152180076F431 /* MooderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CBC21CB2C6152160076F431 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					1CBC21D22C6152160076F431 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					1CBC21E22C6152170076F431 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 1CBC21D22C6152160076F431;
+					};
+					1CBC21EC2C6152180076F431 = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 1CBC21D22C6152160076F431;
+					};
+				};
+			};
+			buildConfigurationList = 1CBC21CE2C6152160076F431 /* Build configuration list for PBXProject "Mooder" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CBC21CA2C6152160076F431;
+			productRefGroup = 1CBC21D42C6152160076F431 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CBC21D22C6152160076F431 /* Mooder */,
+				1CBC21E22C6152170076F431 /* MooderTests */,
+				1CBC21EC2C6152180076F431 /* MooderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CBC21D12C6152160076F431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBC21DE2C6152170076F431 /* Preview Assets.xcassets in Resources */,
+				1CBC21DB2C6152170076F431 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBC21E12C6152170076F431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBC21EB2C6152180076F431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CBC21CF2C6152160076F431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBC21D92C6152160076F431 /* ContentView.swift in Sources */,
+				1CBC21D72C6152160076F431 /* MooderApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBC21DF2C6152170076F431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBC21E82C6152170076F431 /* MooderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CBC21E92C6152180076F431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBC21F42C6152180076F431 /* MooderUITestsLaunchTests.swift in Sources */,
+				1CBC21F22C6152180076F431 /* MooderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CBC21E52C6152170076F431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CBC21D22C6152160076F431 /* Mooder */;
+			targetProxy = 1CBC21E42C6152170076F431 /* PBXContainerItemProxy */;
+		};
+		1CBC21EF2C6152180076F431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CBC21D22C6152160076F431 /* Mooder */;
+			targetProxy = 1CBC21EE2C6152180076F431 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1CBC21F52C6152180076F431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CBC21F62C6152180076F431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CBC21F82C6152180076F431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mooder/Mooder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mooder/Preview Content\"";
+				DEVELOPMENT_TEAM = LU98KMRPFW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mbm.Mooder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CBC21F92C6152180076F431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Mooder/Mooder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Mooder/Preview Content\"";
+				DEVELOPMENT_TEAM = LU98KMRPFW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.mbm.Mooder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1CBC21FB2C6152180076F431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.MooderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mooder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mooder";
+			};
+			name = Debug;
+		};
+		1CBC21FC2C6152180076F431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.MooderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mooder.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Mooder";
+			};
+			name = Release;
+		};
+		1CBC21FE2C6152180076F431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.MooderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mooder;
+			};
+			name = Debug;
+		};
+		1CBC21FF2C6152180076F431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.MooderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mooder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CBC21CE2C6152160076F431 /* Build configuration list for PBXProject "Mooder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBC21F52C6152180076F431 /* Debug */,
+				1CBC21F62C6152180076F431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBC21F72C6152180076F431 /* Build configuration list for PBXNativeTarget "Mooder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBC21F82C6152180076F431 /* Debug */,
+				1CBC21F92C6152180076F431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBC21FA2C6152180076F431 /* Build configuration list for PBXNativeTarget "MooderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBC21FB2C6152180076F431 /* Debug */,
+				1CBC21FC2C6152180076F431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBC21FD2C6152180076F431 /* Build configuration list for PBXNativeTarget "MooderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBC21FE2C6152180076F431 /* Debug */,
+				1CBC21FF2C6152180076F431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CBC21CB2C6152160076F431 /* Project object */;
+}

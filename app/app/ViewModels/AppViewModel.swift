@@ -9,95 +9,96 @@ class AppViewModel: ObservableObject {
     @Published var errorMessage: String = ""
 
     private let databaseManager: DatabaseManager
+    private var cancellables = Set<AnyCancellable>()
 
     init(databaseManager: DatabaseManager) {
         self.databaseManager = databaseManager
-        loadUsers()
-        loadUserData()
-    }
-
-    // Load users from the database
-    func loadUsers() {
-        if let users = databaseManager.loadUsers() {
-            // Handle loaded users if necessary
-        }
-    }
-
-    // Save users to the database
-    func saveUsers() {
-        if let user = self.user {
-            databaseManager.saveUsers(users: [user]) // Save the current user
-        }
-    }
-
-    // Load user data (balances and transactions) for the logged-in user
-    func loadUserData() {
-        guard let userId = user?.id else { return }
-        
-        if let balances = databaseManager.loadBalances(forUserId: userId) {
-            userBalances = balances
-        }
-
-        if let transactions = databaseManager.loadTransactions(forUserId: userId) {
-            userTransactions = transactions
-        }
-    }
-
-    // Save user data (balances and transactions) for the logged-in user
-    func saveUserData() {
-        guard let userId = user?.id else { return }
-        
-        databaseManager.saveBalances(balances: userBalances, forUserId: userId)
-        databaseManager.saveTransactions(transactions: userTransactions, forUserId: userId)
     }
 
     func login(email: String, password: String) {
-        if let user = databaseManager.getUser(withEmail: email, password: password) {
-            isLoggedIn = true
-            self.user = user
-            loadUserData() // Load user-specific data
-        } else {
-            errorMessage = "Invalid email or password."
-        }
+        databaseManager.login(email: email, password: password)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case let .failure(error) = completion {
+                    self.errorMessage = "Invalid email or password."
+                    print("Error logging in: \(error)")
+                }
+            }, receiveValue: { user in
+                self.isLoggedIn = true
+                self.user = user
+                self.loadUserData(forUserId: user.id)
+            })
+            .store(in: &cancellables)
     }
 
     func signUp(name: String, email: String, password: String) {
-        let newUser = User(id: UUID(), name: name, email: email, password: password) // Mock user
-        databaseManager.saveUsers(users: [newUser]) // Save the new user
-        isLoggedIn = true
-        user = newUser
-        saveUserData() // Initialize user data
+        databaseManager.signUp(name: name, email: email, password: password)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case let .failure(error) = completion {
+                    print("Error signing up: \(error)")
+                }
+            }, receiveValue: { })
+            .store(in: &cancellables)
     }
 
-    func addOrUpdateBalance(amount: Double, currency: Currency) {
+    func loadUserData(forUserId userId: String) {
+        databaseManager.loadBalances(forUserId: userId)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case let .failure(error) = completion {
+                    print("Error loading balances: \(error)")
+                }
+            }, receiveValue: { balances in
+                self.userBalances = balances
+            })
+            .store(in: &cancellables)
+
+        databaseManager.loadTransactions(forUserId: userId)
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                if case let .failure(error) = completion {
+                    print("Error loading transactions: \(error)")
+                }
+            }, receiveValue: { transactions in
+                self.userTransactions = transactions
+            })
+            .store(in: &cancellables)
+    }
+
+    func addOrUpdateBalance(amount: Double, currency: String) {
         if let index = userBalances.firstIndex(where: { $0.currency == currency }) {
             userBalances[index].amount = amount // Update existing balance
         } else {
-            let newBalance = Balance(id: UUID(), amount: amount, currency: currency)
+            let newBalance = Balance(currency: currency, amount: amount)
             userBalances.append(newBalance) // Add new balance if it doesn't exist
         }
-        saveUserData() // Save balances after adding/updating
+        
+        if let userId = user?.id {
+            databaseManager.saveBalances(balances: userBalances, forUserId: userId)
+                .receive(on: RunLoop.main)
+                .sink(receiveCompletion: { completion in
+                    if case let .failure(error) = completion {
+                        print("Error saving balances: \(error)")
+                    }
+                }, receiveValue: { })
+                .store(in: &cancellables)
+        }
     }
 
-    func addTransaction(type: TransactionType, amount: Double, description: String, category: String) {
-        let newTransaction = Transaction(id: UUID(), type: type, amount: amount, date: Date(), description: description, category: category)
+    func addTransaction(type: String, amount: Double, description: String, date: String) {
+        let newTransaction = Transaction(id: UUID(), type: type, amount: amount, description: description, date: date)
         userTransactions.append(newTransaction)
 
-        // Update balance based on transaction type
-        if type == .income {
-            if let index = userBalances.firstIndex(where: { $0.currency == .mad }) {
-                let currentBalance = userBalances[index].amount
-                let newBalance = currentBalance + amount
-                userBalances[index].amount = newBalance // Update balance for income
-            }
-        } else {
-            if let index = userBalances.firstIndex(where: { $0.currency == .mad }) {
-                let currentBalance = userBalances[index].amount
-                let newBalance = currentBalance - amount
-                userBalances[index].amount = newBalance // Update balance for expense
-            }
+        if let userId = user?.id {
+            databaseManager.saveTransactions(transactions: userTransactions, forUserId: userId)
+                .receive(on: RunLoop.main)
+                .sink(receiveCompletion: { completion in
+                    if case let .failure(error) = completion {
+                        print("Error saving transactions: \(error)")
+                    }
+                }, receiveValue: { })
+                .store(in: &cancellables)
         }
-
-        saveUserData() // Save transactions after adding
     }
 }
